@@ -33,3 +33,7 @@ thoughtSchema.virtual('reactionCount')
 })
 
 // How to use a getter method to format the timestamp on query? What does getters: true actually do?
+
+const Thought = model('Thought', thoughtSchema);
+
+module.exports = Thought;
