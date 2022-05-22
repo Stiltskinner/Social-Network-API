@@ -15,7 +15,7 @@
 ## Description
 This is the back-end for a fictional social network. It was built in MongoDB with Mongoose. It allows for the creation of users, adding/removing other users as friends, adding thoughts (which are short posts), reacting to those thoughts, editing/deleting thoughts and reactions, and getting all thoughts and reactions.
 
-[Demonstration Video](./Social%20Network%20API%20Demo.mp4)
+<a id="raw-url" href="https://github.com/Stiltskinner/Social-Network-API/blob/main/Social%20Network%20API%20Demo.mp4" download="RT-Social-API-Demo">Download Demo Video</a>
 
 [Google Drive Version of Demonstration Video](https://drive.google.com/file/d/1KkoiLJdD9VuitQVcjzlHnwWmRufSCYR3/view?usp=sharing)
     
