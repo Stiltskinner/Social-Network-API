@@ -9,10 +9,15 @@ const thoughtSchema = new Schema(
           maxlength: 280,
           minlength: 1
         },
+        // createdAt: {
+        //   type: Date,
+        //   default: new Date().toDateString(),
+        // },
         createdAt: {
-          type: Date,
-          default: new Date().toString(),
-        },
+            type: Date,
+            default: Date.now,
+            get: formatDate
+          },
         username: {
             type: String,
             required: true
@@ -27,6 +32,12 @@ const thoughtSchema = new Schema(
         id: false,
     }
 );
+
+function formatDate (date) {
+    const timeElapsed = date;
+    const today = new Date(timeElapsed);
+    return today.toUTCString();
+  }
 
 thoughtSchema.virtual('reactionCount')
 .get(function () {

@@ -11,10 +11,15 @@ const reactionSchema = new Schema(
       required: true,
       maxlength: 280,
     },
+    // createdAt: {
+    //     type: Date,
+    //     default: new Date().toDateString(),
+    //   },
     createdAt: {
-        type: Date,
-        default: new Date().toString(),
-      },
+      type: Date,
+      default: Date.now,
+      get: formatDate
+    },
   },
   {
     toJSON: {
@@ -23,6 +28,12 @@ const reactionSchema = new Schema(
     id: false,
   }
 );
+
+function formatDate (date) {
+  const timeElapsed = date;
+  const today = new Date(timeElapsed);
+  return today.toUTCString();
+}
 
 module.exports = reactionSchema;
 // Also needs date formatting with a getter
