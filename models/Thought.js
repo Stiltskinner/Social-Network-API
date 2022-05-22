@@ -9,10 +9,6 @@ const thoughtSchema = new Schema(
           maxlength: 280,
           minlength: 1
         },
-        // createdAt: {
-        //   type: Date,
-        //   default: new Date().toDateString(),
-        // },
         createdAt: {
             type: Date,
             default: Date.now,
@@ -43,8 +39,6 @@ thoughtSchema.virtual('reactionCount')
 .get(function () {
     return `Number of reaction: ${this.reactions.length}`;
 })
-
-// How to use a getter method to format the timestamp on query? What does getters: true actually do?
 
 const Thought = model('Thought', thoughtSchema);
 
