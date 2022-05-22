@@ -5,7 +5,7 @@ module.exports = {
   // Get all thoughts
   getThoughts(req, res) {
     Thought.find()
-      .then((courses) => res.json(courses))
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
   // Get a single thought
@@ -31,14 +31,13 @@ module.exports = {
   // Delete a thought
   deleteThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
-      .then((thought) =>
-        !thought
-          ? res.status(404).json({ message: 'No thought with that ID' })
-          : Reaction.deleteMany({ _id: { $in: thought.reactions } })
-      )
-      .then(() => res.json({ message: 'Thought and reactions deleted!' }))
-      .catch((err) => res.status(500).json(err));
-  },
+    .then((thought) =>
+    !thought
+      ? res.status(404).json({ message: 'No thought with that ID' })
+      : res.json({message: `Thought id:${req.params.thoughtId} successfully deleted`})
+  )
+  .catch((err) => res.status(500).json(err));
+},
   // Update a course
   updateThought(req, res) {
     Thought.findOneAndUpdate(
