@@ -15,7 +15,9 @@
 ## Description
 This is the back-end for a fictional social network. It was built in MongoDB with Mongoose. It allows for the creation of users, adding/removing other users as friends, adding thoughts (which are short posts), reacting to those thoughts, editing/deleting thoughts and reactions, and getting all thoughts and reactions.
 
-[Demonstration Video](https://drive.google.com/file/d/1XyvTkAnNoNonwSbwqz9ArkdZO_Q56DIb/view)
+[Demonstration Video](./Social%20Network%20API%20Demo.mp4)
+
+[Google Drive Version of Demonstration Video](https://drive.google.com/file/d/1KkoiLJdD9VuitQVcjzlHnwWmRufSCYR3/view?usp=sharing)
     
 ## License
 **MIT** - A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code. 
