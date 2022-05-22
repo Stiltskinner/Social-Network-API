@@ -38,7 +38,7 @@ module.exports = {
   )
   .catch((err) => res.status(500).json(err));
 },
-  // Update a course
+  // Update a thought
   updateThought(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
